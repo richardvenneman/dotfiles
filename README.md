@@ -8,17 +8,16 @@
 
 ## Install software
 
-### Development
-
 1. `git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"`
 2. `brew install zsh zsh-completions stow rbenv yarn redis heroku/brew/heroku`
 3. `brew cask install postgres atom virtualbox google-chrome firefox`
+4. `brew cask install dropbox skype`
 
 If installing VirtualBox fails, open macOS Security & Privacy preference pane and try again.
 
-### Other
+## Other
 
-1. `brew cask install dropbox skype`
+Install [Noto Mono](https://www.google.com/get/noto/) and [Noto Mono for Powerline](https://github.com/powerline/fonts/tree/master/NotoMono).
 
 ## Configure software
 

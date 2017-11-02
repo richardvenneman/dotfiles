@@ -3,6 +3,7 @@
     projectHome: "/Users/richard/Projects"
     telemetryConsent: "limited"
   editor:
+    fontFamily: "Noto Mono"
     showIndentGuide: true
     showInvisibles: true
   "exception-reporting":
@@ -11,3 +12,5 @@
     formatOnSaveOptions:
       enabled: true
     useEslint: true
+  welcome:
+    showOnStartup: false
