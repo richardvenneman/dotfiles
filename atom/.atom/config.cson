@@ -1,4 +1,6 @@
 "*":
+  "atom-beautify":
+    html: {}
   core:
     projectHome: "/Users/richard/Projects"
     telemetryConsent: "limited"
@@ -8,6 +10,9 @@
     showInvisibles: true
   "exception-reporting":
     userId: "2d988161-f935-4d35-a3cb-3355d46a1dd2"
+  "linter-erb":
+    erbExecutablePath: "/Users/richard/.rbenv/shims/erb"
+    rubyExecutablePath: "/Users/richard/.rbenv/shims/ruby"
   "linter-rubocop":
     command: "/Users/richard/.rbenv/shims/rubocop"
   "prettier-atom":
