@@ -8,6 +8,8 @@
     showInvisibles: true
   "exception-reporting":
     userId: "2d988161-f935-4d35-a3cb-3355d46a1dd2"
+  "linter-rubocop":
+    command: "/Users/richard/.rbenv/shims/rubocop"
   "prettier-atom":
     formatOnSaveOptions:
       enabled: true
