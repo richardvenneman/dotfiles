@@ -1,0 +1,13 @@
+"*":
+  core:
+    projectHome: "/Users/richard/Projects"
+    telemetryConsent: "limited"
+  editor:
+    showIndentGuide: true
+    showInvisibles: true
+  "exception-reporting":
+    userId: "2d988161-f935-4d35-a3cb-3355d46a1dd2"
+  "prettier-atom":
+    formatOnSaveOptions:
+      enabled: true
+    useEslint: true

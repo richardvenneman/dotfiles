@@ -28,4 +28,5 @@ If installing VirtualBox fails, open macOS Security & Privacy preference pane an
 ```shell
 cd ~/.dotfiles
 stow zsh
+stow atom
 ```
