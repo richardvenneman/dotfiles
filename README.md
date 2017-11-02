@@ -9,7 +9,7 @@
 ## Install software
 
 1. `git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"`
-2. `brew install zsh zsh-completions stow rbenv yarn redis heroku/brew/heroku puma/puma/puma-dev`
+2. `brew install zsh zsh-completions stow rbenv yarn redis heroku/brew/heroku puma/puma/puma-dev terminal-notifier`
 3. `brew cask install postgres atom virtualbox google-chrome firefox`
 4. `brew cask install dropbox skype`
 
