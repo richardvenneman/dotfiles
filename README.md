@@ -25,7 +25,12 @@ Install [Noto Mono](https://www.google.com/get/noto/) and [Noto Mono for Powerli
 2. Run commands:
 
 ```shell
+# Symlink with stow
 cd ~/.dotfiles
 stow zsh
 stow atom
+
+# Setup iTerm2 preferences
+defaults write com.googlecode.iterm2 "PrefsCustomFolder" -string "~/.dotfiles/iterm2"
+defaults write com.googlecode.iterm2 "LoadPrefsFromCustomFolder" -bool true
 ```
