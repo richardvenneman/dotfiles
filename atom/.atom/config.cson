@@ -21,3 +21,4 @@
     useEslint: true
   welcome:
     showOnStartup: false
+  whitespace: {}
