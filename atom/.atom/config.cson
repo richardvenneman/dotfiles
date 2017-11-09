@@ -14,9 +14,6 @@
   "linter-ui-default": {}
   "prettier-atom":
     formatOnSaveOptions:
-      cssScopes: [
-        "-"
-      ]
       enabled: true
     useEslint: true
   welcome:
