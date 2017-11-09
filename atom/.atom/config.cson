@@ -12,6 +12,9 @@
     command: "/Users/richard/.rbenv/shims/rubocop"
   "linter-stylelint": {}
   "linter-ui-default": {}
+  "package-sync":
+    createOnChange: true
+    forceOverwrite: true
   "prettier-atom":
     formatOnSaveOptions:
       enabled: true
