@@ -20,6 +20,7 @@ packages: [
   "package-sync"
   "pigments"
   "prettier-atom"
+  "project-manager"
   "rails-snippets"
   "Sublime-Style-Column-Selection"
   "toggle-quotes"
