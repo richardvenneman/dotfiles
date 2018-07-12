@@ -1,25 +1,39 @@
 "*":
   core:
+    disabledPackages: [
+      "language-gfm"
+      "hyperclick"
+    ]
     projectHome: "/Users/richard/Projects"
     telemetryConsent: "limited"
   editor:
     fontFamily: "Noto Mono"
+    fontSize: 13
+    invisibles: {}
     showIndentGuide: true
     showInvisibles: true
   "exception-reporting":
     userId: "2d988161-f935-4d35-a3cb-3355d46a1dd2"
+  "linter-erb":
+    erbExecutablePath: "/Users/richard/.rbenv/shims/erb"
+    rubyExecutablePath: "/Users/richard/.rbenv/shims/ruby"
   "linter-rubocop":
     command: "/Users/richard/.rbenv/shims/rubocop"
     disableWhenNoConfigFile: true
   "linter-stylelint": {}
-  "linter-ui-default": {}
+  "linter-tslint":
+    fixOnSave: true
+  "linter-ui-default":
+    panelHeight: 210
   "package-sync":
     createOnChange: true
     forceOverwrite: true
   "prettier-atom":
     formatOnSaveOptions:
       enabled: true
+      isDisabledIfNotInPackageJson: true
     useEslint: true
+    useStylelint: true
   welcome:
     showOnStartup: false
   whitespace: {}
