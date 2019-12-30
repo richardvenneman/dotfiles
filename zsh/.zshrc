@@ -13,3 +13,7 @@ fi
 # Customize to your needs...
 
 export SPACESHIP_PACKAGE_SHOW=false
+
+  # Set Spaceship ZSH as a prompt
+  autoload -U promptinit; promptinit
+  prompt spaceship
