@@ -25,9 +25,9 @@
     fixOnSave: true
   "linter-ui-default":
     panelHeight: 210
+    showPanel: true
   "package-sync":
     createOnChange: true
-    forceOverwrite: true
   "prettier-atom":
     formatOnSaveOptions:
       enabled: true
