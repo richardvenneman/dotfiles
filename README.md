@@ -11,13 +11,13 @@
 1. `git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"`
 2. `brew install zsh zsh-completions stow rbenv yarn redis heroku/brew/heroku puma/puma/puma-dev terminal-notifier`
 3. `brew cask install postgres atom virtualbox google-chrome firefox`
-4. `brew cask install dropbox skype`
+4. `brew cask install skype`
 
 If installing VirtualBox fails, open macOS Security & Privacy preference pane and try again.
 
 ## Other
 
-Install [Noto Mono](https://www.google.com/get/noto/) and [Noto Mono for Powerline](https://github.com/powerline/fonts/tree/master/NotoMono).
+Install [Fira Code](https://github.com/tonsky/FiraCode) (TTF).
 
 ## Configure software
 
