@@ -10,7 +10,7 @@
 
 1. `git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"`
 2. `brew install zsh zsh-completions stow rbenv yarn redis heroku/brew/heroku puma/puma/puma-dev terminal-notifier`
-3. `brew cask install postgres atom virtualbox google-chrome firefox`
+3. `brew cask install postgres atom virtualbox google-chrome firefox finicky`
 4. `brew cask install skype`
 
 If installing VirtualBox fails, open macOS Security & Privacy preference pane and try again.
@@ -29,6 +29,7 @@ Install [Fira Code](https://github.com/tonsky/FiraCode) (TTF).
 cd ~/.dotfiles
 stow zsh
 stow atom
+stow .finicky.js
 
 # Setup iTerm2 preferences
 defaults write com.googlecode.iterm2 "PrefsCustomFolder" -string "~/.dotfiles/iterm2"
