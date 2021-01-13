@@ -4,13 +4,14 @@
 
 1. [Install 1Password](https://1password.com)
 2. [Install Homebrew](https://brew.sh)
-3. `$ brew tap caskroom/cask`
+3. [Install Nova](https://nova.app)
+4. `$ brew tap caskroom/cask`
 
 ## Install software
 
 1. `git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"`
 2. `brew install zsh zsh-completions stow rbenv yarn redis heroku/brew/heroku puma/puma/puma-dev terminal-notifier`
-3. `brew cask install postgres atom virtualbox google-chrome firefox finicky`
+3. `brew cask install postgres virtualbox google-chrome firefox finicky`
 4. `brew cask install skype`
 
 If installing VirtualBox fails, open macOS Security & Privacy preference pane and try again.
@@ -28,7 +29,6 @@ Install [Fira Code](https://github.com/tonsky/FiraCode) (TTF).
 # Symlink with stow
 cd ~/.dotfiles
 stow zsh
-stow atom
 stow .finicky.js
 
 # Setup iTerm2 preferences
