@@ -14,7 +14,7 @@ First, let's make sure we have a workable terminal environment.
 Install dependencies:
 
 1. `brew install zsh zsh-completions stow rbenv yarn redis heroku/brew/heroku puma/puma/puma-dev terminal-notifier`
-2. `brew cask install 1password iterm2 nova postgres google-chrome firefox finicky`
+2. `brew install 1password iterm2 nova postgres google-chrome firefox finicky whatsapp --cask`
 
 ## Other
 
