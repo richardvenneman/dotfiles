@@ -40,7 +40,7 @@ defaults write com.googlecode.iterm2 "LoadPrefsFromCustomFolder" -bool true
 
 ## Configure OS
 
-Disable font-smoothing:
+Per [Time to upgrade your monitor](https://tonsky.me/blog/monitors/), set the correct scaled resolution and disable font-smoothing:
 ```shell
 defaults -currentHost write -g AppleFontSmoothing -int 0
 ```
