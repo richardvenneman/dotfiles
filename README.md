@@ -37,3 +37,10 @@ defaults write com.googlecode.iterm2 "LoadPrefsFromCustomFolder" -bool true
 ```
 
 3. [Setup Puma-dev](https://github.com/puma/puma-dev#install)
+
+## Configure OS
+
+Disable font-smoothing:
+```shell
+defaults -currentHost write -g AppleFontSmoothing -int 0
+```
