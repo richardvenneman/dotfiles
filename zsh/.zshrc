@@ -1,19 +1,10 @@
-#
-# Executes commands at the start of an interactive session.
-#
-# Authors:
-#   Sorin Ionescu <sorin.ionescu@gmail.com>
-#
+export EDITOR="nova --wait"
 
-# Source Prezto.
-if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
-  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
-fi
+# ZSH configuration
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-# Customize to your needs...
+export STARSHIP_CONFIG=$HOME/.dotfiles/zsh/starship.toml
+eval "$(starship init zsh)"
 
-export SPACESHIP_PACKAGE_SHOW=false
-
-  # Set Spaceship ZSH as a prompt
-  autoload -U promptinit; promptinit
-  prompt spaceship
+# Ruby
+eval "$(rbenv init - zsh)"

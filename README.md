@@ -1,19 +1,23 @@
 # Dotfiles
 
-## Terminal
-First, let's make sure we have a workable terminal environment.
+## Install package managers
+[Install Homebrew](https://brew.sh):
 
-1. `git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"`
-2. `git clone --recurse-submodules https://github.com/belak/prezto-contrib "${ZDOTDIR:-$HOME}/.zprezto/contrib"`
+```shell
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+## Terminal
+Now to make sure we have a workable terminal environment:
+
+```shell
+brew install zsh-autosuggestions starship
+```
 
 ## Install dependencies
-[Install Homebrew](https://brew.sh) and Homebrew Cask:
-
-`$ brew tap homebrew/cask`
-
 Install dependencies:
 
-1. `brew install zsh zsh-completions stow rbenv yarn redis heroku/brew/heroku puma/puma/puma-dev terminal-notifier`
+1. `brew install stow rbenv ruby-build yarn redis heroku/brew/heroku puma/puma/puma-dev terminal-notifier`
 2. `brew install 1password iterm2 nova postgres google-chrome firefox finicky whatsapp --cask`
 
 ## Other
