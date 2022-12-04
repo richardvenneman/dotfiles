@@ -18,7 +18,7 @@ brew install zsh-autosuggestions starship
 Install dependencies:
 
 1. `brew install stow rbenv ruby-build yarn redis heroku/brew/heroku puma/puma/puma-dev terminal-notifier`
-2. `brew install 1password iterm2 nova postgres google-chrome firefox finicky whatsapp --cask`
+2. `brew install 1password iterm2 nova postgres google-chrome firefox finicky whatsapp maccy --cask`
 
 ## Other
 
