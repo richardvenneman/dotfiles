@@ -26,6 +26,7 @@
   - font-fira-code-nerd-font
   - heroku
   - postgresql
+  - redis
   - rbenv
   - ruby-build
   - starship
