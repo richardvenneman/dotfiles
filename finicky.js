@@ -10,6 +10,10 @@ module.exports = {
     {
       match: /^https?:\/\/meet\.google\.com\/.*$/,
       browser: "Google Chrome"
+    },
+    {
+      match: /^https?:\/\/.+web\.zoom\.us\/.*$/,
+      browser: "Google Chrome"
     }
   ]
 }
