@@ -25,6 +25,7 @@
   - doppler
   - font-fira-code-nerd-font
   - heroku
+  - postgresql
   - rbenv
   - ruby-build
   - starship
