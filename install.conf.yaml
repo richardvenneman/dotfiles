@@ -17,10 +17,12 @@
 - install-brew: true
 
 - tap:
+  - dopplerhq/doppler
   - heroku/brew
   - homebrew/cask-fonts
 
 - brew:
+  - doppler
   - font-fira-code-nerd-font
   - heroku
   - rbenv
