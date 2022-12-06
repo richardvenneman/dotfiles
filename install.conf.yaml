@@ -18,11 +18,13 @@
 
 - tap:
   - dopplerhq/doppler
+  - elastic/tap
   - heroku/brew
   - homebrew/cask-fonts
 
 - brew:
   - doppler
+  - elasticsearch-full
   - font-fira-code-nerd-font
   - heroku
   - postgresql
