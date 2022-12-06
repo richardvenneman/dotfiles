@@ -14,3 +14,6 @@ export NVM_DIR="$HOME/.nvm"
 # ZSH configuration
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 eval "$(starship init zsh)"
+
+# Aliases
+alias dr="doppler run"
