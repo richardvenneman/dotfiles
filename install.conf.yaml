@@ -7,7 +7,7 @@
       create: true
       relink: true
 
-- clean: ['~']
+- clean: ["~"]
 
 - link:
     ~/.finicky.js:
@@ -17,42 +17,43 @@
 - install-brew: true
 
 - tap:
-  - dopplerhq/doppler
-  - elastic/tap
-  - heroku/brew
-  - homebrew/cask-fonts
+    - dopplerhq/doppler
+    - elastic/tap
+    - heroku/brew
+    - homebrew/cask-fonts
 
 - brew:
-  - doppler
-  - elasticsearch-full
-  - font-fira-code-nerd-font
-  - heroku
-  - postgresql
-  - redis
-  - rbenv
-  - ruby-build
-  - starship
-  - yarn
-  - zsh-autosuggestions
+    - doppler
+    - elasticsearch-full
+    - font-fira-code-nerd-font
+    - heroku
+    - postgresql
+    - redis
+    - rbenv
+    - ruby-build
+    - starship
+    - yarn
+    - zsh-autosuggestions
 
 - cask:
-  - 1password
-  - iterm2
-  - maccy
-  - nova
-  - google-chrome
-  - firefox
-  - finicky
-  - visual-studio-code
-  - whatsapp
+    - 1password
+    - handbrake
+    - iterm2
+    - maccy
+    - nova
+    - google-chrome
+    - firefox
+    - finicky
+    - visual-studio-code
+    - whatsapp
 
 - shell:
-  # Install NVM
-  - curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash
+    # Install NVM
+    - curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash
 
-  # Set iTerm2 to load preferences from this folder 
-  - defaults write com.googlecode.iterm2 "PrefsCustomFolder" -string "~/.dotfiles"
-  - defaults write com.googlecode.iterm2 "LoadPrefsFromCustomFolder" -bool true
-  
-  # Turn off font smoothing for crispier display of text
-  - defaults -currentHost write -g AppleFontSmoothing -int 0
+    # Set iTerm2 to load preferences from this folder
+    - defaults write com.googlecode.iterm2 "PrefsCustomFolder" -string "~/.dotfiles"
+    - defaults write com.googlecode.iterm2 "LoadPrefsFromCustomFolder" -bool true
+
+    # Turn off font smoothing for crispier display of text
+    - defaults -currentHost write -g AppleFontSmoothing -int 0
