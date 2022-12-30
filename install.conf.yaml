@@ -12,6 +12,7 @@
 - link:
     ~/.finicky.js:
     ~/.gitconfig:
+    ~/.starship.toml:
     ~/.zshrc:
 
 - install-brew: true

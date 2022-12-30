@@ -15,6 +15,7 @@ export PATH="${HOME}/.pyenv/shims:${PATH}"
 eval "$(rbenv init - zsh)"
 
 # ZSH configuration
+export STARSHIP_CONFIG=$HOME/.starship.toml
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 eval "$(starship init zsh)"
 
