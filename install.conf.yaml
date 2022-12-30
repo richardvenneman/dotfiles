@@ -28,6 +28,7 @@
     - font-fira-code-nerd-font
     - heroku
     - postgresql
+    - pyenv
     - redis
     - rbenv
     - ruby-build
