@@ -39,7 +39,6 @@
     - zsh-autosuggestions
 
 - cask:
-    - 1password
     - handbrake
     - iterm2
     - loom
