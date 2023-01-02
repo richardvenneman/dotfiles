@@ -27,6 +27,7 @@
     - doppler
     - elasticsearch-full
     - font-fira-code-nerd-font
+    - git-lfs
     - heroku
     - postgresql
     - pyenv
@@ -41,9 +42,11 @@
     - 1password
     - handbrake
     - iterm2
+    - loom
     - maccy
     - nova
     - google-chrome
+    - github
     - firefox
     - finicky
     - visual-studio-code
