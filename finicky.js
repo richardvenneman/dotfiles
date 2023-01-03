@@ -3,7 +3,7 @@
 module.exports = {
   defaultBrowser: "Safari",
   options: {
-    hideIcon: true
+    hideIcon: true,
   },
   handlers: [
     {
@@ -12,22 +12,25 @@ module.exports = {
         "google.com/*", // match google.com urls
         "*.google.com/*", // match google.com subdomains
       ],
-      browser: "Google Chrome"
+      browser: "Google Chrome",
     },
     {
       // Video conferencing in Chrome
-      match: [/^https?:\/\/meet\.google\.com\/.*$/, /^https?:\/\/.+web\.zoom\.us\/.*$/],
-      browser: "Google Chrome"
+      match: [
+        /^https?:\/\/meet\.google\.com\/.*$/,
+        /^https?:\/\/.+web\.zoom\.us\/.*$/,
+      ],
+      browser: "Google Chrome",
     },
     {
       // Open links to Linear issues directly in the Linear desktop app
       match: /^https?:\/\/linear\.app\/.+\/issue\/.*$/,
-      browser: "Linear"
+      browser: "Linear",
     },
     {
       // Open these in Chrome
-      match: /\S{3,}hiiv\.com/,
-      browser: "Google Chrome"
-    }
-  ]
-}
+      match: [/\S{3,}hiiv\.com/, /\S+beehiiv\S+/],
+      browser: "Google Chrome",
+    },
+  ],
+};
