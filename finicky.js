@@ -28,6 +28,11 @@ module.exports = {
       browser: "Linear",
     },
     {
+      // Open links from Linear in Chrome
+      match: ({ opener }) => opener.bundleId === "com.linear",
+      browser: "Google Chrome",
+    },
+    {
       // Open these in Chrome
       match: [/\S{3,}hiiv\.com/, /\S+beehiiv\S+/],
       browser: "Google Chrome",
