@@ -29,6 +29,7 @@
     - font-fira-code-nerd-font
     - git-lfs
     - heroku
+    - imagemagick
     - postgresql
     - pyenv
     - redis
