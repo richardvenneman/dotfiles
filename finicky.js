@@ -1,5 +1,10 @@
 // ~/.finicky.js
 
+const workApps = [
+  "com.linear",
+  "com.tinyspeck.slackmacgap", // Slack
+];
+
 module.exports = {
   defaultBrowser: "Safari",
   options: {
@@ -29,7 +34,7 @@ module.exports = {
     },
     {
       // Open links from Linear in Chrome
-      match: ({ opener }) => opener.bundleId === "com.linear",
+      match: ({ opener }) => workApps.includes(opener.bundleId),
       browser: "Google Chrome",
     },
     {
