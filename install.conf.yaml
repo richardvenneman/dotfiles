@@ -12,6 +12,7 @@
 - link:
     ~/.finicky.js:
     ~/.gitconfig:
+    ~/.huskyrc:
     ~/.starship.toml:
     ~/.zshrc:
 
@@ -24,9 +25,12 @@
     - homebrew/cask-fonts
 
 - brew:
+    - coreutils
+    - curl
     - doppler
     - elasticsearch-full
     - font-fira-code-nerd-font
+    - git
     - git-lfs
     - heroku
     - imagemagick
@@ -44,7 +48,6 @@
     - iterm2
     - loom
     - maccy
-    - nova
     - google-chrome
     - github
     - firefox

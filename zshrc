@@ -1,4 +1,6 @@
 export EDITOR="code --wait"
+export DISABLE_SPRING="true"
+setopt HIST_IGNORE_SPACE
 
 # Set PATH, MANPATH, etc., for Homebrew.
 eval "$(/opt/homebrew/bin/brew shellenv)"
@@ -19,8 +21,11 @@ export STARSHIP_CONFIG=$HOME/.starship.toml
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 eval "$(starship init zsh)"
 
-# Aliases
-alias dr="doppler run"
+# Functions
+dr() {
+  dopcmd="$@"
+  doppler run --command "${dopcmd}"
+}
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!

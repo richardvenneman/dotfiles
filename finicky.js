@@ -1,31 +1,40 @@
 // ~/.finicky.js
 
+const personalBrowser = "Safari";
+const workBrowser = "Arc";
+
+const personalApps = [
+  "Mail"
+]
+
 const workApps = [
-  "com.linear",
-  "com.tinyspeck.slackmacgap", // Slack
+  "Linear",
+  "Slack",
 ];
 
 module.exports = {
-  defaultBrowser: "Safari",
+  defaultBrowser: personalBrowser,
   options: {
     hideIcon: true,
   },
   handlers: [
     {
-      // Open google.com and *.google.com urls in Google Chrome
-      match: [
-        "google.com/*", // match google.com urls
-        "*.google.com/*", // match google.com subdomains
-      ],
-      browser: "Google Chrome",
+      // Open links from personal apps in the personal browser
+      match: ({ opener }) => personalApps.includes(opener.name),
+      browser: personalBrowser,
     },
     {
-      // Video conferencing in Chrome
+      // Open links from work apps in the work browser
+      match: ({ opener }) => workApps.includes(opener.name),
+      browser: workBrowser,
+    },
+    {
+      // Video conferencing in the work browser
       match: [
         /^https?:\/\/meet\.google\.com\/.*$/,
         /^https?:\/\/.+web\.zoom\.us\/.*$/,
       ],
-      browser: "Google Chrome",
+      browser: workBrowser,
     },
     {
       // Open links to Linear issues directly in the Linear desktop app
@@ -33,14 +42,14 @@ module.exports = {
       browser: "Linear",
     },
     {
-      // Open links from Linear in Chrome
+      // Open links from Linear in the work browser
       match: ({ opener }) => workApps.includes(opener.bundleId),
-      browser: "Google Chrome",
+      browser: workBrowser,
     },
     {
-      // Open these in Chrome
+      // Open these in the work browser
       match: [/\S{3,}hiiv\.com/, /\S+beehiiv\S+/],
-      browser: "Google Chrome",
+      browser: workBrowser,
     },
   ],
 };
