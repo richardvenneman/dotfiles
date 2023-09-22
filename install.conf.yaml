@@ -9,44 +9,43 @@
 
 - clean: ["~"]
 
+- git:
+    "~/.asdf":
+      url: "https://github.com/asdf-vm/asdf.git"
+      description: "asdf version manager"
+
 - link:
     ~/.finicky.js:
     ~/.gitconfig:
-    ~/.huskyrc:
     ~/.starship.toml:
     ~/.zshrc:
 
-- install-brew: true
-
-- tap:
-    - dopplerhq/doppler
-    - elastic/tap
-    - heroku/brew
-    - homebrew/cask-fonts
+- asdf:
+    - plugin: python
+      url: https://github.com/tuvistavie/asdf-python.git
+    - plugin: nodejs
+      url: https://github.com/asdf-vm/asdf-nodejs.git
+    - plugin: ruby
+      url: https://github.com/asdf-vm/asdf-ruby.git
 
 - brew:
     - coreutils
     - curl
     - doppler
-    - elasticsearch-full
     - font-fira-code-nerd-font
     - git
     - git-lfs
     - heroku
     - imagemagick
-    - postgresql
-    - pyenv
+    - opensearch
+    - postgresql@14
     - redis
-    - rbenv
-    - ruby-build
-    - starship
     - yarn
     - zsh-autosuggestions
 
 - cask:
     - handbrake
     - iterm2
-    - loom
     - maccy
     - google-chrome
     - github
@@ -55,10 +54,12 @@
     - visual-studio-code
     - whatsapp
 
-- shell:
-    # Install NVM
-    - curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash
+- tap:
+    - dopplerhq/doppler
+    - heroku/brew
+    - homebrew/cask-fonts
 
+- shell:
     # Set iTerm2 to load preferences from this folder
     - defaults write com.googlecode.iterm2 "PrefsCustomFolder" -string "~/.dotfiles"
     - defaults write com.googlecode.iterm2 "LoadPrefsFromCustomFolder" -bool true
