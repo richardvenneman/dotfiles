@@ -1,7 +1,8 @@
 - defaults:
-    brew:
-      - stderr: False,
-      - stdout: False,
+    brewfile:
+      stdout: true
+      stderr: true
+      include: ["tap", "brew", "cask", "mas"]
 
     link:
       create: true
@@ -20,6 +21,9 @@
     ~/.starship.toml:
     ~/.zshrc:
 
+- brewfile:
+    file: Brewfile
+
 - asdf:
     - plugin: python
       url: https://github.com/tuvistavie/asdf-python.git
@@ -28,41 +32,6 @@
     - plugin: ruby
       url: https://github.com/asdf-vm/asdf-ruby.git
 
-- tap:
-    - dopplerhq/cli
-    - heroku/brew
-    - homebrew/cask-fonts
-
-- brew:
-    - coreutils
-    - curl
-    - dopplerhq/cli/doppler
-    - font-fira-code-nerd-font
-    - git
-    - git-lfs
-    - heroku
-    - imagemagick
-    - mas
-    - opensearch
-    - postgresql@14
-    - redis
-    - starship
-    - yarn
-    - zsh-autosuggestions
-
-- cask:
-    - 1password
-    - arc
-    - handbrake
-    - iterm2
-    - logi-options-plus
-    - maccy
-    - github
-    - firefox
-    - finicky
-    - visual-studio-code
-    - whatsapp
-
 - shell:
     # Set iTerm2 to load preferences from this folder
     - defaults write com.googlecode.iterm2 "PrefsCustomFolder" -string "~/.dotfiles"
@@ -70,6 +39,3 @@
 
     # Turn off font smoothing for crispier display of text
     - defaults -currentHost write -g AppleFontSmoothing -int 0
-
-    # Install Mac App Store apps
-    - mas install 1429033973 # RunCat
