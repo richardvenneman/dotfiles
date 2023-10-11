@@ -42,6 +42,7 @@
     - git-lfs
     - heroku
     - imagemagick
+    - mas
     - opensearch
     - postgresql@14
     - redis
@@ -54,6 +55,7 @@
     - arc
     - handbrake
     - iterm2
+    - logi-options-plus
     - maccy
     - github
     - firefox
@@ -68,3 +70,6 @@
 
     # Turn off font smoothing for crispier display of text
     - defaults -currentHost write -g AppleFontSmoothing -int 0
+
+    # Install Mac App Store apps
+    - mas install 1429033973 # RunCat
