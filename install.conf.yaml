@@ -51,10 +51,10 @@
 
 - cask:
     - 1password
+    - arc
     - handbrake
     - iterm2
     - maccy
-    - google-chrome
     - github
     - firefox
     - finicky
