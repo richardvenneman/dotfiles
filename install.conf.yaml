@@ -40,6 +40,7 @@
     - opensearch
     - postgresql@14
     - redis
+    - starship
     - yarn
     - zsh-autosuggestions
 
