@@ -28,10 +28,15 @@
     - plugin: ruby
       url: https://github.com/asdf-vm/asdf-ruby.git
 
+- tap:
+    - dopplerhq/cli
+    - heroku/brew
+    - homebrew/cask-fonts
+
 - brew:
     - coreutils
     - curl
-    - doppler
+    - dopplerhq/cli/doppler
     - font-fira-code-nerd-font
     - git
     - git-lfs
@@ -45,6 +50,7 @@
     - zsh-autosuggestions
 
 - cask:
+    - 1password
     - handbrake
     - iterm2
     - maccy
@@ -54,11 +60,6 @@
     - finicky
     - visual-studio-code
     - whatsapp
-
-- tap:
-    - dopplerhq/doppler
-    - heroku/brew
-    - homebrew/cask-fonts
 
 - shell:
     # Set iTerm2 to load preferences from this folder
