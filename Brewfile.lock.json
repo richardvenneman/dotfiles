@@ -619,7 +619,8 @@
       "RunCat": {
         "id": "1429033973",
         "version": "10.3"
-      }
+      },
+      "Slack for Desktop": null
     },
     "vscode": {
       "benspaulding.procfile": null,

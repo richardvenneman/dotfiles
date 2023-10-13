@@ -30,6 +30,7 @@ cask "visual-studio-code"
 
 mas "1Password", id: 443987910
 mas "RunCat", id: 1429033973
+mas "Slack for Desktop", id: 803453959
 
 vscode "benspaulding.procfile"
 vscode "Blinknlights.fuzzy-ruby-server"
