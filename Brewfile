@@ -13,6 +13,7 @@ brew "heroku/brew/heroku"
 brew "imagemagick"
 brew "starship"
 brew "yarn"
+brew "vips"
 brew "zsh-autosuggestions"
 
 brew "opensearch", restart_service: true
