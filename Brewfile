@@ -27,6 +27,7 @@ cask "github"
 cask "handbrake"
 cask "iterm2"
 cask "maccy"
+cask "postico"
 cask "visual-studio-code"
 
 mas "1Password", id: 443987910
