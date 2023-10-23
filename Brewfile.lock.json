@@ -659,6 +659,12 @@
         "options": {
           "full_name": "postico"
         }
+      },
+      "cleanshot": {
+        "version": "4.6.1",
+        "options": {
+          "full_name": "cleanshot"
+        }
       }
     },
     "mas": {
