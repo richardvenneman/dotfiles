@@ -1,0 +1,13 @@
+[
+  // {
+  //   "command": "runCommands",
+  //   "key": "cmd+s",
+  //   "args": {
+  //     "commands": [
+  //       "workbench.action.files.save",
+  //       "extension.runSpecLine"
+  //     ]
+  //   },
+  //   "when": "resourceFilename =~ /spec./i"
+  // }
+]

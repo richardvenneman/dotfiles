@@ -1,0 +1,65 @@
+{
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmDelete": false,
+  "editor.minimap.autohide": true,
+  "editor.fontLigatures": true,
+  "editor.fontFamily": "FiraCode Nerd Font Mono",
+  "editor.linkedEditing": true,
+  "editor.codeActionsOnSave": {
+    "source.addMissingImports": true,
+    "source.fixAll.eslint": true
+  },
+  "terminal.external.osxExec": "iTerm.app",
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "terminal.integrated.fontFamily": "FiraCode Nerd Font Mono",
+  "editor.inlineSuggest.enabled": true,
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "editor.rulers": [100],
+  "editor.tabSize": 2,
+  "workbench.preferredLightColorTheme": "Default Light+",
+  "workbench.preferredDarkColorTheme": "Default Dark+",
+  "files.trimTrailingWhitespace": true,
+  "search.followSymlinks": false,
+  "workbench.editorAssociations": {
+    "git-rebase-todo": "default"
+  },
+  "files.insertFinalNewline": true,
+  "editor.accessibilitySupport": "off",
+  "ruby-spec-runner.rspecCommand": "dr bundle exec rspec",
+  "ruby-spec-runner.rspecDebugButton": false,
+  "ruby-spec-runner.rspecCodeLensDebugPrompts": false,
+  "window.autoDetectColorScheme": true,
+  "workbench.colorTheme": "Default Light+",
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "rubyLsp.enabledFeatures": {
+    "codeActions": true,
+    "diagnostics": false,
+    "documentHighlights": true,
+    "documentLink": true,
+    "documentSymbols": true,
+    "foldingRanges": true,
+    "formatting": false,
+    "hover": true,
+    "inlayHint": true,
+    "onTypeFormatting": true,
+    "selectionRanges": true,
+    "semanticHighlighting": true,
+    "completion": true,
+    "codeLens": true,
+    "definition": true,
+    "workspaceSymbol": true,
+    "references": true
+  },
+  "rubyLsp.formatter": "none",
+  "standardRuby.mode": "enableViaGemfile",
+  "editor.formatOnSave": true
+}
