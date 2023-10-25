@@ -613,7 +613,7 @@
         }
       },
       "firefox": {
-        "version": "118.0.2",
+        "version": "119.0",
         "options": {
           "full_name": "firefox"
         }
@@ -665,6 +665,12 @@
         "options": {
           "full_name": "cleanshot"
         }
+      },
+      "grammarly-desktop": {
+        "version": "1.41.1.0",
+        "options": {
+          "full_name": "grammarly-desktop"
+        }
       }
     },
     "mas": {
@@ -711,7 +717,7 @@
   "system": {
     "macos": {
       "sonoma": {
-        "HOMEBREW_VERSION": "4.1.16",
+        "HOMEBREW_VERSION": "4.1.17",
         "HOMEBREW_PREFIX": "/opt/homebrew",
         "Homebrew/homebrew-core": "api",
         "CLT": "15.0.0.0.1.1694021235",
