@@ -16,6 +16,7 @@
       description: "asdf version manager"
 
 - link:
+    ~/.asdfrc:
     ~/.finicky.js:
     ~/.gitconfig:
     ~/.starship.toml:
