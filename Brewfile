@@ -21,6 +21,7 @@ brew "postgresql@14", restart_service: true
 brew "redis", restart_service: true
 
 cask "cleanshot"
+cask "expressvpn"
 cask "finicky"
 cask "firefox"
 cask "font-fira-code-nerd-font"
