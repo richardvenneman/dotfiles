@@ -37,6 +37,8 @@
       url: https://github.com/asdf-vm/asdf-ruby.git
 
 - shell:
+    - command: "./scripts/keybindings"
+
     # Set iTerm2 to load preferences from this folder
     - defaults write com.googlecode.iterm2 "PrefsCustomFolder" -string "~/.dotfiles"
     - defaults write com.googlecode.iterm2 "LoadPrefsFromCustomFolder" -bool true
