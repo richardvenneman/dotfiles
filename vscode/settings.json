@@ -6,8 +6,8 @@
   "editor.fontFamily": "FiraCode Nerd Font Mono",
   "editor.linkedEditing": true,
   "editor.codeActionsOnSave": {
-    "source.addMissingImports": true,
-    "source.fixAll.eslint": true
+    "source.addMissingImports": "explicit",
+    "source.fixAll.eslint": "explicit"
   },
   "terminal.external.osxExec": "iTerm.app",
   "terminal.integrated.defaultProfile.osx": "zsh",
@@ -21,7 +21,6 @@
   "editor.rulers": [100],
   "editor.tabSize": 2,
   "workbench.preferredLightColorTheme": "Default Light+",
-  "workbench.preferredDarkColorTheme": "Default Dark+",
   "files.trimTrailingWhitespace": true,
   "search.followSymlinks": false,
   "workbench.editorAssociations": {
@@ -32,8 +31,6 @@
   "ruby-spec-runner.rspecCommand": "dr bundle exec rspec",
   "ruby-spec-runner.rspecDebugButton": false,
   "ruby-spec-runner.rspecCodeLensDebugPrompts": false,
-  "window.autoDetectColorScheme": true,
-  "workbench.colorTheme": "Default Light+",
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -61,5 +58,10 @@
   },
   "rubyLsp.formatter": "none",
   "standardRuby.mode": "enableViaGemfile",
-  "editor.formatOnSave": true
+  "editor.formatOnSave": true,
+  "window.autoDetectColorScheme": true,
+  "workbench.preferredDarkColorTheme": "Default Dark+",
+  "workbench.colorTheme": "Default Dark+",
+  "editor.minimap.enabled": false,
+  "ruby-spec-runner.rspecRunAllFailedButton": true
 }

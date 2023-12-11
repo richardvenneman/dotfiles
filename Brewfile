@@ -20,6 +20,7 @@ brew "opensearch", restart_service: true
 brew "postgresql@14", restart_service: true
 brew "redis", restart_service: true
 
+cask "arc"
 cask "cleanshot"
 cask "expressvpn"
 cask "finicky"
