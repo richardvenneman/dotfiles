@@ -27,6 +27,14 @@ $ git clone git@github.com:richardvenneman/dotfiles.git .dotfiles --recursive
 $ cd .dotfiles && ./install
 ```
 
+## Optional: Configure power schedule
+Optional step for a work machine: I like running my MacBook in clamshell mode and to avoid having to open it up to press the power button every morning, we can set up a power schedule. Especially useful since I currently have it mounted/tucked away underneath my desk:
+
+```
+sudo su
+pmset repeat wakeorpoweron MTWRF 8:45:00
+```
+
 ## Updating
 
 ```
