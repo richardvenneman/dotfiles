@@ -12,7 +12,7 @@
 
 - git:
     "~/.asdf":
-      url: "https://github.com/asdf-vm/asdf.git"
+      url: "https://github.com/asdf-vm/asdf"
       description: "asdf version manager"
 
 - link:
