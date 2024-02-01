@@ -23,16 +23,16 @@ brew "redis", restart_service: true
 
 cask "arc"
 cask "cleanshot"
-cask "expressvpn"
 cask "finicky"
 cask "firefox"
 cask "font-fira-code-nerd-font"
 cask "github"
-cask "grammarly-desktop"
 cask "handbrake"
+cask "languagetool"
 cask "iterm2"
 cask "maccy"
 cask "postico"
+cask "rectangle"
 cask "visual-studio-code"
 
 mas "1Password", id: 443987910
