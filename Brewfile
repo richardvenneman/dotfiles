@@ -3,6 +3,10 @@ tap "heroku/brew"
 tap "homebrew/cask-fonts"
 tap "homebrew/services"
 
+brew "opensearch", restart_service: true
+brew "postgresql@14", restart_service: true
+brew "redis", restart_service: true
+
 brew "coreutils"
 brew "curl"
 brew "dopplerhq/cli/doppler"
@@ -12,15 +16,11 @@ brew "gnupg"
 brew "heroku/brew/heroku"
 brew "imagemagick"
 brew "libyaml"
+brew "pgvector"
 brew "starship"
 brew "yarn"
 brew "vips"
 brew "zsh-autosuggestions"
-
-brew "opensearch", restart_service: true
-brew "postgresql@14", restart_service: true
-brew "redis", restart_service: true
-
 cask "arc"
 cask "cleanshot"
 cask "finicky"
@@ -34,6 +34,7 @@ cask "maccy"
 cask "postico"
 cask "rectangle"
 cask "visual-studio-code"
+cask "vivid"
 
 mas "1Password", id: 443987910
 mas "RunCat", id: 1429033973
