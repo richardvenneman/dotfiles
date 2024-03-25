@@ -6,3 +6,6 @@
 [user]
 	name = Richard Venneman
 	email = richardvenneman@me.com
+
+[includeIf "gitdir:~/Developer/beehiiv/"]
+  path = .gitconfig-beehiiv
