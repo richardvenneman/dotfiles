@@ -13,11 +13,9 @@ export STARSHIP_CONFIG=$HOME/.starship.toml
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 eval "$(starship init zsh)"
 
-# Functions
-dr() {
-  dopcmd="$@"
-  doppler run --command "${dopcmd}"
-}
+# Aliases
+alias dr="doppler run --"
+alias rake="noglob rake"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!

@@ -61,7 +61,8 @@
   "editor.formatOnSave": true,
   "window.autoDetectColorScheme": true,
   "workbench.preferredDarkColorTheme": "Default Dark+",
-  "workbench.colorTheme": "Default Dark+",
+  "workbench.colorTheme": "Default Light+",
   "editor.minimap.enabled": false,
-  "ruby-spec-runner.rspecRunAllFailedButton": true
+  "ruby-spec-runner.rspecRunAllFailedButton": true,
+  "githubPullRequests.pullBranch": "never"
 }
