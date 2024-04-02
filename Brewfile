@@ -2,6 +2,7 @@ tap "dopplerhq/cli"
 tap "heroku/brew"
 tap "homebrew/cask-fonts"
 tap "homebrew/services"
+tap "stripe/stripe-cli"
 
 brew "opensearch", restart_service: true
 brew "postgresql@14", restart_service: true
@@ -18,9 +19,11 @@ brew "imagemagick"
 brew "libyaml"
 brew "pgvector"
 brew "starship"
+brew "stripe/stripe-cli/stripe"
 brew "yarn"
 brew "vips"
 brew "zsh-autosuggestions"
+
 cask "arc"
 cask "cleanshot"
 cask "finicky"
