@@ -25,6 +25,7 @@ brew "vips"
 brew "zsh-autosuggestions"
 
 cask "arc"
+cask "chatgpt"
 cask "cleanshot"
 cask "finicky"
 cask "firefox"
