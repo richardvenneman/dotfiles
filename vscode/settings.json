@@ -64,5 +64,6 @@
   "workbench.colorTheme": "Default Light+",
   "editor.minimap.enabled": false,
   "ruby-spec-runner.rspecRunAllFailedButton": true,
-  "githubPullRequests.pullBranch": "never"
+  "githubPullRequests.pullBranch": "never",
+  "window.zoomLevel": 1,
 }
