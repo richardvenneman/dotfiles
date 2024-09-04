@@ -44,7 +44,9 @@ cask "vivid"
 
 mas "1Password", id: 443987910
 mas "RunCat", id: 1429033973
+mas "Soulver", id: 1508732804
 mas "Slack for Desktop", id: 803453959
+mas "WhatsApp Messenger", id: 310633997
 
 vscode "benspaulding.procfile"
 vscode "Blinknlights.fuzzy-ruby-server"
