@@ -5,7 +5,7 @@ tap "homebrew/services"
 tap "stripe/stripe-cli"
 
 brew "opensearch", restart_service: true
-brew "postgresql@14", restart_service: true
+brew "postgresql@17", restart_service: true
 brew "redis", restart_service: true
 
 brew "coreutils"
@@ -14,7 +14,7 @@ brew "dopplerhq/cli/doppler"
 brew "git-lfs"
 brew "git"
 brew "gnupg"
-brew "heroku/brew/heroku"
+brew "heroku"
 brew "imagemagick"
 brew "libyaml"
 brew "pgvector"
@@ -26,6 +26,7 @@ brew "zsh-autosuggestions"
 
 cask "arc"
 cask "chatgpt"
+cask "claude"
 cask "cleanshot"
 cask "docker"
 cask "finicky"
@@ -38,7 +39,6 @@ cask "iterm2"
 cask "maccy"
 cask "obsidian"
 cask "postico"
-cask "rectangle"
 cask "visual-studio-code"
 cask "vivid"
 

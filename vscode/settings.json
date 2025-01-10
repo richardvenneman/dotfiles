@@ -3,7 +3,7 @@
   "explorer.confirmDelete": false,
   "editor.minimap.autohide": true,
   "editor.fontLigatures": true,
-  "editor.fontFamily": "FiraCode Nerd Font Mono",
+  "editor.fontFamily": "Cascadia Code NF",
   "editor.linkedEditing": true,
   "editor.codeActionsOnSave": {
     "source.addMissingImports": "explicit",
@@ -20,7 +20,6 @@
   },
   "editor.rulers": [100],
   "editor.tabSize": 2,
-  "workbench.preferredLightColorTheme": "Default Light+",
   "files.trimTrailingWhitespace": true,
   "search.followSymlinks": false,
   "workbench.editorAssociations": {
@@ -56,14 +55,23 @@
     "workspaceSymbol": true,
     "references": true
   },
-  "rubyLsp.formatter": "none",
   "standardRuby.mode": "enableViaGemfile",
   "editor.formatOnSave": true,
   "window.autoDetectColorScheme": true,
-  "workbench.preferredDarkColorTheme": "Default Dark+",
-  "workbench.colorTheme": "Default Light+",
+  "workbench.preferredDarkColorTheme": "One Dark Pro",
+  "workbench.colorTheme": "Atom One Light",
   "editor.minimap.enabled": false,
   "ruby-spec-runner.rspecRunAllFailedButton": true,
   "githubPullRequests.pullBranch": "never",
   "window.zoomLevel": 1,
+  "workbench.sideBar.location": "right",
+  "search.exclude": {
+    "**/coverage/**": true,
+    "**/log/**": true,
+    "**/node_modules": false,
+    "**/node_modules/**": true,
+    "**/tmp/**": true
+  },
+  "chat.editing.alwaysSaveWithGeneratedChanges": true,
+  "typescript.updateImportsOnFileMove.enabled": "always"
 }
