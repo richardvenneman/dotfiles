@@ -6,12 +6,17 @@ setopt HIST_IGNORE_SPACE
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # ASDF configuration
-. "$HOME/.asdf/asdf.sh"
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
+fpath=(${ASDF_DATA_DIR:-$HOME/.asdf}/completions $fpath)
+autoload -Uz compinit && compinit
 
 # ZSH configuration
 export STARSHIP_CONFIG=$HOME/.starship.toml
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 eval "$(starship init zsh)"
+
+# Postgres support
+export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 
 # Aliases
 alias dr="doppler run --"
