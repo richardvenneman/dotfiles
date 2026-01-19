@@ -22,6 +22,7 @@
     ~/.gitconfig-beehiiv:
     ~/.starship.toml:
     ~/.zshrc:
+    ~/.config/ghostty: ghostty
 
     ~/Library/Application Support/Code/User/settings.json: vscode/settings.json
     ~/Library/Application Support/Code/User/keybindings.json: vscode/keybindings.json
