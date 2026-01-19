@@ -8,6 +8,7 @@ brew "opensearch", restart_service: true
 brew "postgresql@17", restart_service: true
 brew "redis", restart_service: true
 
+brew "biome"
 brew "coreutils"
 brew "curl"
 brew "dopplerhq/cli/doppler"

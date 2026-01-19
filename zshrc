@@ -18,6 +18,9 @@ eval "$(starship init zsh)"
 # Postgres support
 export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 
+# Rust
+export PATH="$HOME/.cargo/bin:$PATH"
+
 # Aliases
 alias dr="doppler run --"
 alias rake="noglob rake"
@@ -37,3 +40,10 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+# pnpm
+export PNPM_HOME="/Users/richardvenneman/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end

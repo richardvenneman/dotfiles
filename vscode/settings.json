@@ -1,77 +1,82 @@
 {
-  "explorer.confirmDragAndDrop": false,
-  "explorer.confirmDelete": false,
-  "editor.minimap.autohide": true,
-  "editor.fontLigatures": true,
-  "editor.fontFamily": "Cascadia Code NF",
-  "editor.linkedEditing": true,
-  "editor.codeActionsOnSave": {
-    "source.addMissingImports": "explicit",
-    "source.fixAll.eslint": "explicit"
-  },
-  "terminal.external.osxExec": "iTerm.app",
-  "terminal.integrated.defaultProfile.osx": "zsh",
-  "terminal.integrated.fontFamily": "FiraCode Nerd Font Mono",
-  "editor.inlineSuggest.enabled": true,
-  "git.autofetch": true,
-  "git.confirmSync": false,
-  "[typescriptreact]": {
-    "editor.defaultFormatter": "vscode.typescript-language-features"
-  },
-  "editor.rulers": [100],
-  "editor.tabSize": 2,
-  "files.trimTrailingWhitespace": true,
-  "search.followSymlinks": false,
-  "workbench.editorAssociations": {
-    "git-rebase-todo": "default"
-  },
-  "files.insertFinalNewline": true,
-  "editor.accessibilitySupport": "off",
-  "ruby-spec-runner.rspecCommand": "dr bundle exec rspec",
-  "ruby-spec-runner.rspecDebugButton": false,
-  "ruby-spec-runner.rspecCodeLensDebugPrompts": false,
-  "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "rubyLsp.enabledFeatures": {
-    "codeActions": true,
-    "diagnostics": false,
-    "documentHighlights": true,
-    "documentLink": true,
-    "documentSymbols": true,
-    "foldingRanges": true,
-    "formatting": false,
-    "hover": true,
-    "inlayHint": true,
-    "onTypeFormatting": true,
-    "selectionRanges": true,
-    "semanticHighlighting": true,
-    "completion": true,
-    "codeLens": true,
-    "definition": true,
-    "workspaceSymbol": true,
-    "references": true
-  },
-  "standardRuby.mode": "enableViaGemfile",
-  "editor.formatOnSave": true,
-  "window.autoDetectColorScheme": true,
-  "workbench.preferredDarkColorTheme": "One Dark Pro",
-  "workbench.colorTheme": "Atom One Light",
-  "editor.minimap.enabled": false,
-  "ruby-spec-runner.rspecRunAllFailedButton": true,
-  "githubPullRequests.pullBranch": "never",
-  "window.zoomLevel": 1,
-  "workbench.sideBar.location": "right",
-  "search.exclude": {
-    "**/coverage/**": true,
-    "**/log/**": true,
-    "**/node_modules": false,
-    "**/node_modules/**": true,
-    "**/tmp/**": true
-  },
-  "chat.editing.alwaysSaveWithGeneratedChanges": true,
-  "typescript.updateImportsOnFileMove.enabled": "always"
+	"explorer.confirmDragAndDrop": false,
+	"explorer.confirmDelete": false,
+	"editor.minimap.autohide": "mouseover",
+	"editor.fontLigatures": true,
+	"editor.fontFamily": "Cascadia Code NF",
+	"editor.linkedEditing": true,
+	"editor.codeActionsOnSave": {
+		"source.addMissingImports": "explicit",
+		"source.fixAll.eslint": "explicit"
+	},
+	"terminal.external.osxExec": "iTerm.app",
+	"terminal.integrated.defaultProfile.osx": "zsh",
+	"terminal.integrated.fontFamily": "FiraCode Nerd Font Mono",
+	"editor.inlineSuggest.enabled": true,
+	"git.autofetch": true,
+	"git.confirmSync": false,
+	"[typescriptreact]": {
+		"editor.defaultFormatter": "vscode.typescript-language-features"
+	},
+	"editor.rulers": [
+		100
+	],
+	"editor.tabSize": 2,
+	"files.trimTrailingWhitespace": true,
+	"search.followSymlinks": false,
+	"workbench.editorAssociations": {
+		"git-rebase-todo": "default"
+	},
+	"files.insertFinalNewline": true,
+	"editor.accessibilitySupport": "off",
+	"rubyLsp.enabledFeatures": {
+		"codeActions": true,
+		"diagnostics": false,
+		"documentHighlights": true,
+		"documentLink": true,
+		"documentSymbols": true,
+		"foldingRanges": true,
+		"formatting": false,
+		"hover": true,
+		"inlayHint": true,
+		"onTypeFormatting": true,
+		"selectionRanges": true,
+		"semanticHighlighting": true,
+		"completion": true,
+		"codeLens": true,
+		"definition": true,
+		"workspaceSymbol": true,
+		"references": true
+	},
+	"rubyLsp.featureFlags": {
+		"fullTestDiscovery": true
+	},
+	"editor.formatOnSave": true,
+	"window.autoDetectColorScheme": true,
+	"workbench.preferredDarkColorTheme": "Catppuccin Mocha",
+	"workbench.colorTheme": "Atom One Light",
+	"editor.minimap.enabled": false,
+	"githubPullRequests.pullBranch": "never",
+	"window.zoomLevel": 1,
+	"workbench.sideBar.location": "right",
+	"search.exclude": {
+		"**/coverage/**": true,
+		"**/log/**": true,
+		"**/node_modules": false,
+		"**/node_modules/**": true,
+		"**/tmp/**": true
+	},
+	"typescript.updateImportsOnFileMove.enabled": "always",
+	"github.copilot.nextEditSuggestions.enabled": true,
+	"workbench.preferredLightColorTheme": "Catppuccin Mocha",
+	"editor.wordWrapColumn": 120,
+	"[ruby]": {
+		"editor.defaultFormatter": "Shopify.ruby-lsp"
+	},
+	"diffEditor.ignoreTrimWhitespace": false,
+	"git.enableSmartCommit": true,
+	"workbench.editor.enablePreview": false,
+	"chat.mcp.gallery.enabled": true,
+	"claudeCode.preferredLocation": "panel",
+	"claudeCode.selectedModel": "opus"
 }
