@@ -1,0 +1,54 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# Caps how long a single module may stall the whole prompt.
+command_timeout = 1000
+scan_timeout = 30
+
+# ── Directory ───────────────────────────────────────────────────────────
+[directory]
+truncation_length = 3
+truncate_to_repo = true
+style = "cyan bold"
+
+# ── Git ─────────────────────────────────────────────────────────────────
+[git_branch]
+symbol = " "
+
+[git_status]
+# Dominates prompt latency in large repos.
+ignore_submodules = true
+
+# ── Language versions ───────────────────────────────────────────────────
+# Each of these shells out to a `--version` call, so detection is narrowed to
+# real project markers instead of any stray source file in the directory.
+[ruby]
+symbol = "💎 "
+detect_extensions = []
+detect_files = ["Gemfile", ".ruby-version", ".tool-versions", "mise.toml"]
+
+[nodejs]
+symbol = " "
+detect_extensions = []
+detect_files = ["package.json", ".nvmrc", ".tool-versions", "mise.toml"]
+detect_folders = ["node_modules"]
+
+[python]
+detect_extensions = []
+detect_files = [
+  "requirements.txt",
+  "pyproject.toml",
+  "Pipfile",
+  ".python-version",
+  "mise.toml",
+]
+
+# ── Off ─────────────────────────────────────────────────────────────────
+# Unused VCSes; each costs a filesystem probe per prompt.
+[hg_branch]
+disabled = true
+
+[pijul_channel]
+disabled = true
+
+[battery]
+disabled = true

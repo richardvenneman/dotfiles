@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# Changing this hash is what re-triggers the script.
+# Brewfile hash: {{ include "dot_Brewfile.tmpl" | sha256sum }}
+
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# Homebrew refuses to load anything from a third-party tap until it is trusted.
+echo "==> Trusting third-party taps"
+brew trust --tap stripe/stripe-cli heroku/brew{{ if eq .profile "work" }} dopplerhq/cli{{ end }} 2>/dev/null || true
+
+echo "==> brew bundle"
+brew bundle install --global --no-upgrade
+
+# Takes over an existing .app in place rather than reinstalling over it.
+# Needs sudo when the app's permissions require a chmod.
+echo "==> Adopting apps installed outside Homebrew"
+for app in arc claude cleanshot postico home-assistant slack soulver beeper{{ if eq .profile "personal" }} screen-studio{{ end }}; do
+    if ! brew list --cask "$app" >/dev/null 2>&1; then
+        brew install --cask --adopt "$app" || echo "  ! could not adopt $app (skipping)"
+    fi
+done

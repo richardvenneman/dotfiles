@@ -1,0 +1,7 @@
+README.md
+.github/
+.ruby-lsp/
+
+{{ if ne .profile "work" }}
+.gitconfig-beehiiv
+{{ end }}

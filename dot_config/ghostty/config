@@ -1,5 +1,5 @@
 font-family = Cascadia Code NF
-background-opacity = 0.8
+#background-opacity = 0.8
 background-blur = true
 theme = Catppuccin Frappe
 window-padding-x = 12
