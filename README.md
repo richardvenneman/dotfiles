@@ -1,99 +1,85 @@
 # Dotfiles
 
-Managed with [chezmoi](https://www.chezmoi.io/). Machine configuration *and*
-installed software live here, so a new Mac reaches a working state from one
-command.
+This is a [chezmoi](https://www.chezmoi.io/) powered repository containing my dotfiles, together with the packages and apps I want on a machine. I'm tracking these to accommodate for setting up new machines easily. In case you've arrived here, I'd recommend checking out chezmoi to set up your own configuration (it's really easy).
 
-## Bootstrap a new machine
+## Prerequisites
+
+### Git & GitHub
 
 ```
-sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply richardvenneman
+$ xcode-select --install
+$ brew install gh
+$ gh auth login
 ```
 
-That single line clones this repo, prompts once for the machine profile
-(`personal` or `work`), installs Homebrew, applies every dotfile, installs all
-declared packages, and sets up runtimes. Nothing else is required — `git` comes
-from the Xcode command line tools, which macOS prompts for automatically.
+Homebrew gets installed on the first run, so there's nothing to do for it up front.
 
-## Layout
+## Installation
 
-| Path | Purpose |
-|---|---|
-| `.chezmoi.toml.tmpl` | Prompts for the machine profile on first init |
-| `.chezmoiignore` | Files excluded per profile |
-| `.chezmoiscripts/` | Ordered lifecycle scripts (see below) |
-| `dot_Brewfile.tmpl` | → `~/.Brewfile`, read by `brew bundle --global` |
-| `dot_config/` | → `~/.config/*` (zed, mise, ghostty, starship) |
-| `Library/LaunchAgents/` | Login agents |
+```
+$ sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply richardvenneman
+```
 
-Files are **copied**, not symlinked. Edit them with `chezmoi edit ~/.zshrc`, or
-edit in place and run `chezmoi re-add`.
+This clones the repository to `~/.local/share/chezmoi`, asks me whether it's a personal or work machine, and then sets the rest up: dotfiles, Homebrew packages, App Store apps and language runtimes.
+
+On a machine that already has configuration worth keeping I leave off `--apply`, so I can look at `chezmoi diff` before anything gets written.
 
 ## Profiles
 
-The profile is chosen once at `chezmoi init` and stored in
-`~/.config/chezmoi/chezmoi.toml`. It gates:
+I'm asked once whether the machine is `personal` or `work`, and the answer is remembered in `~/.config/chezmoi/chezmoi.toml`. It decides:
 
-- **work** — beehiiv git identity, `doppler` alias
-- **personal** — games/media, IoT and flashing tools, Screen Studio
+- **work** — my beehiiv git identity and the Doppler CLI
+- **personal** — games, media, and the tools I use for flashing hardware
 
-Change it later with `chezmoi init --promptChoice "Machine profile=personal"`.
+To change my mind later:
 
-## Scripts
+```
+$ chezmoi init --promptChoice "Machine profile=personal"
+```
 
-Run in filename order during `chezmoi apply`:
+## Making changes
 
-| Script | When |
-|---|---|
-| `run_once_before_00-install-homebrew` | Once per machine, before any file |
-| `run_onchange_after_10-brew-bundle` | When the Brewfile changes |
-| `run_onchange_after_20-mise-install` | When the mise config changes |
-| `run_onchange_after_30-macos-defaults` | When the script changes |
+Files are copied into place rather than symlinked, so editing `~/.zshrc` directly won't update this repository. I either go through chezmoi, or pull the change back in afterwards:
 
-`run_onchange_` scripts are keyed on a content hash, so editing the Brewfile
-re-runs `brew bundle` while an unrelated `chezmoi apply` does not.
+```
+$ chezmoi edit ~/.zshrc
+$ chezmoi re-add            # when I've edited the file in place
+$ chezmoi cd                # jump to this repository
+```
 
 ## Packages
 
-`~/.Brewfile` is the declared truth, applied **additively** — `brew bundle`
-installs what is missing and never removes anything.
+Everything I want installed lives in `~/.Brewfile`. It only ever installs, so anything I'm experimenting with sticks around until I clear it out myself:
 
 ```
-mise run brew-sync       # install everything declared
-mise run brew-cleanup    # list installed-but-undeclared (removes nothing)
-mise run up              # pull, apply, and sync everything
+$ mise run brew-sync        # install what's declared
+$ mise run brew-cleanup     # show what's installed but not declared
 ```
 
-To actually prune, run `brew bundle cleanup --global --force` deliberately.
+The App Store apps need me signed in to the App Store first, otherwise they'll quietly fail.
 
-## Runtimes
-
-[mise](https://mise.jdx.dev/) replaces asdf, using PATH activation rather than
-shims. Global versions live in `dot_config/mise/config.toml`.
-
-Note: `idiomatic_version_file_enable_tools` is set explicitly. mise disables
-`.ruby-version` / `.nvmrc` support by default, unlike asdf's
-`legacy_version_file = yes`, so without it existing projects would silently
-resolve to the global version.
+Language runtimes are handled by [mise](https://mise.jdx.dev/), which reads `~/.config/mise/config.toml`. Worth knowing: `.ruby-version` and `.nvmrc` files are ignored unless the tool is listed under `idiomatic_version_file_enable_tools`, which is easy to forget when a project suddenly resolves to the wrong version.
 
 ## Secrets
 
-None are stored in this repo, and nothing is encrypted. When the self-hosted
-Vaultwarden instance is running, point the Bitwarden CLI at it:
+Nothing secret is stored here. Once my Vaultwarden instance is running I can point the Bitwarden CLI at it and pull secrets in at apply time:
 
 ```
-bw config server https://vault.example.com
+$ bw config server https://vault.example.com
 ```
 
-chezmoi's `bitwarden` template functions then resolve secrets at apply time,
-so they are never written to disk in the source repo.
-
-## Daily use
+## Optional: Configure power schedule
+Optional step for a work machine: I like running my MacBook in clamshell mode and to avoid having to open it up to press the power button every morning, we can set up a power schedule. Especially useful since I currently have it mounted/tucked away underneath my desk:
 
 ```
-chezmoi edit ~/.zshrc     # edit a managed file
-chezmoi diff              # preview pending changes
-chezmoi apply             # apply them
-chezmoi re-add            # pull in edits made directly in ~
-chezmoi cd                # jump to the source repo
+sudo su
+pmset repeat wakeorpoweron MTWRF 8:45:00
 ```
+
+## Updating
+
+```
+$ chezmoi update --apply
+```
+
+Or `mise run up`, which pulls, applies, and syncs packages in one go.
