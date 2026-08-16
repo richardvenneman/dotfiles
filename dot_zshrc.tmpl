@@ -7,13 +7,18 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 eval "$(mise activate zsh)"
 
 # Rebuild the completion dump at most once a day; -C skips the security audit
-# and reuses the cache, which is most of compinit's cost.
+# and reuses the cache, which is most of compinit's cost. The match has to go
+# through an array — [[ ]] does no filename generation, so testing the glob
+# directly is always true.
+setopt EXTENDED_GLOB
 autoload -Uz compinit
-if [[ -n ${HOME}/.zcompdump(#qN.mh+24) ]]; then
+zcompdump_stale=(${HOME}/.zcompdump(#qN.mh+24))
+if (( $#zcompdump_stale )); then
   compinit
 else
   compinit -C
 fi
+unset zcompdump_stale
 
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 eval "$(starship init zsh)"

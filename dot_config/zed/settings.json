@@ -75,12 +75,9 @@
   "languages": {
     "Ruby": {
       "language_servers": ["ruby-lsp", "!solargraph", "!rubocop"],
-      "formatter": {
-        "external": {
-          "command": "bundle",
-          "arguments": ["exec", "standardrb", "--fix", "--stdin", "{buffer_path}"]
-        }
-      }
+      // ruby-lsp resolves whatever the project actually uses (standard,
+      // rubocop, or nothing) instead of assuming a gem is in the Gemfile.
+      "formatter": "language_server"
     },
     "JavaScript": { "formatter": "prettier" },
     "TypeScript": { "formatter": "prettier" },
@@ -91,11 +88,6 @@
   "lsp": {
     "ruby-lsp": {
       "initialization_options": {
-        // standardrb owns both, via the external formatter above.
-        "enabledFeatures": {
-          "diagnostics": false,
-          "formatting": false
-        },
         "featureFlags": { "fullTestDiscovery": true }
       }
     }

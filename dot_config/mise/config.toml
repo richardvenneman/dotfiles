@@ -12,7 +12,8 @@ idiomatic_version_file_enable_tools = ["ruby", "node", "python"]
 description = "Show (and optionally remove) packages not declared in ~/.Brewfile"
 run = """
 echo '── Installed but NOT declared in ~/.Brewfile ──'
-brew bundle cleanup --global
+# Exits non-zero whenever it finds anything, which would abort the task.
+brew bundle cleanup --global || true
 echo
 echo 'Nothing was removed. To actually remove the above:'
 echo '  brew bundle cleanup --global --force'

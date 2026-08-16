@@ -4,15 +4,17 @@ This is a [chezmoi](https://www.chezmoi.io/) powered repository containing my do
 
 ## Prerequisites
 
-### Git & GitHub
+Only git, which comes with the command line tools:
 
 ```
 $ xcode-select --install
-$ brew install gh
-$ gh auth login
 ```
 
-Homebrew gets installed on the first run, so there's nothing to do for it up front.
+Homebrew is installed on the first run, so there's nothing to do for it up front. Once that's done I sign in to GitHub, and to the App Store so the App Store apps can install:
+
+```
+$ gh auth login
+```
 
 ## Installation
 
@@ -31,10 +33,12 @@ I'm asked once whether the machine is `personal` or `work`, and the answer is re
 - **work** — my beehiiv git identity and the Doppler CLI
 - **personal** — games, media, and the tools I use for flashing hardware
 
-To change my mind later:
+To change my mind later I have to clear the answer first, since it's only asked when it isn't already known:
 
 ```
+$ rm ~/.config/chezmoi/chezmoi.toml
 $ chezmoi init --promptChoice "Machine profile=personal"
+$ chezmoi apply
 ```
 
 ## Making changes
@@ -56,7 +60,7 @@ $ mise run brew-sync        # install what's declared
 $ mise run brew-cleanup     # show what's installed but not declared
 ```
 
-The App Store apps need me signed in to the App Store first, otherwise they'll quietly fail.
+The App Store apps need me signed in to the App Store first. If I'm not, they fail and the rest of the run carries on without them — so it's worth re-running once I've signed in.
 
 Language runtimes are handled by [mise](https://mise.jdx.dev/), which reads `~/.config/mise/config.toml`. Worth knowing: `.ruby-version` and `.nvmrc` files are ignored unless the tool is listed under `idiomatic_version_file_enable_tools`, which is easy to forget when a project suddenly resolves to the wrong version.
 
