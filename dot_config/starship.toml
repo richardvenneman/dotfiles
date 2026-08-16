@@ -11,9 +11,6 @@ truncate_to_repo = true
 style = "cyan bold"
 
 # ── Git ─────────────────────────────────────────────────────────────────
-[git_branch]
-symbol = " "
-
 [git_status]
 # Dominates prompt latency in large repos.
 ignore_submodules = true
@@ -22,12 +19,10 @@ ignore_submodules = true
 # Each of these shells out to a `--version` call, so detection is narrowed to
 # real project markers instead of any stray source file in the directory.
 [ruby]
-symbol = "💎 "
 detect_extensions = []
 detect_files = ["Gemfile", ".ruby-version", ".tool-versions", "mise.toml"]
 
 [nodejs]
-symbol = " "
 detect_extensions = []
 detect_files = ["package.json", ".nvmrc", ".tool-versions", "mise.toml"]
 detect_folders = ["node_modules"]
