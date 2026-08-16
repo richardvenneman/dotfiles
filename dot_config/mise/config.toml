@@ -1,0 +1,32 @@
+[tools]
+ruby = "3.2.2"
+node = "22.13.0"
+python = "3.13.15"
+
+[settings]
+# Off by default in mise; without this, .ruby-version / .nvmrc / .python-version
+# are ignored and projects silently resolve to the global versions above.
+idiomatic_version_file_enable_tools = ["ruby", "node", "python"]
+
+[tasks.brew-cleanup]
+description = "Show (and optionally remove) packages not declared in ~/.Brewfile"
+run = """
+echo '── Installed but NOT declared in ~/.Brewfile ──'
+# Exits non-zero whenever it finds anything, which would abort the task.
+brew bundle cleanup --global || true
+echo
+echo 'Nothing was removed. To actually remove the above:'
+echo '  brew bundle cleanup --global --force'
+"""
+
+[tasks.brew-sync]
+description = "Install everything declared in ~/.Brewfile"
+run = "brew bundle install --global --no-upgrade"
+
+[tasks.up]
+description = "Pull dotfiles, apply them, and sync packages"
+run = """
+chezmoi update --apply
+mise install
+brew bundle install --global --no-upgrade
+"""

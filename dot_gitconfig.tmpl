@@ -1,11 +1,16 @@
+[user]
+	name = Richard Venneman
+	email = richardvenneman@me.com
+
+[credential]
+	helper = osxkeychain
+
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
-[user]
-	name = Richard Venneman
-	email = richardvenneman@me.com
-
+{{ if eq .profile "work" }}
 [includeIf "gitdir:~/Developer/beehiiv/"]
-  path = .gitconfig-beehiiv
+	path = .gitconfig-beehiiv
+{{- end }}

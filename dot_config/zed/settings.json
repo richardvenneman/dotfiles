@@ -1,0 +1,95 @@
+{
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false,
+    "anthropic_retention": false
+  },
+  "agent_servers": {
+    "claude-acp": {
+      "type": "registry"
+    }
+  },
+  "icon_theme": "Zed (Default)",
+
+  // Installed automatically on launch.
+  "auto_install_extensions": {
+    "ruby": true,
+    "haml": true,
+    "slim": true,
+    "csv": true,
+    "catppuccin": true,
+    "sonokai": true,
+    "alabaster": true,
+    "html": true,
+    "dockerfile": true,
+    "toml": true
+  },
+
+  // ── Appearance ────────────────────────────────────────────────────────
+  "theme": {
+    "mode": "system",
+    "light": "One Light",
+    "dark": "Catppuccin Mocha"
+  },
+
+  "buffer_font_family": "Cascadia Code NF",
+  "buffer_font_size": 14,
+  "buffer_font_features": { "calt": true },
+  "ui_font_size": 15,
+
+  "terminal": {
+    "font_family": "FiraCode Nerd Font Mono",
+    "shell": { "program": "/bin/zsh" }
+  },
+
+  // ── Layout ────────────────────────────────────────────────────────────
+  "project_panel": { "dock": "right" },
+  "minimap": { "show": "never" },
+  "wrap_guides": [100],
+  "show_wrap_guides": true,
+
+  // ── Editing ───────────────────────────────────────────────────────────
+  "tab_size": 2,
+  "format_on_save": "on",
+  "remove_trailing_whitespace_on_save": true,
+  "ensure_final_newline_on_save": true,
+  "show_edit_predictions": true,
+
+  // ── Git ───────────────────────────────────────────────────────────────
+  "git": {
+    "git_gutter": "tracked_files",
+    "inline_blame": { "enabled": true }
+  },
+
+  // ── Search ────────────────────────────────────────────────────────────
+  "file_scan_exclusions": [
+    "**/.git",
+    "**/node_modules",
+    "**/coverage",
+    "**/log",
+    "**/tmp",
+    "**/.DS_Store"
+  ],
+
+  // ── Languages ─────────────────────────────────────────────────────────
+  "languages": {
+    "Ruby": {
+      "language_servers": ["ruby-lsp", "!solargraph", "!rubocop"],
+      // ruby-lsp resolves whatever the project actually uses (standard,
+      // rubocop, or nothing) instead of assuming a gem is in the Gemfile.
+      "formatter": "language_server"
+    },
+    "JavaScript": { "formatter": "prettier" },
+    "TypeScript": { "formatter": "prettier" },
+    "TSX": { "formatter": "prettier" },
+    "JSON": { "tab_size": 2 }
+  },
+
+  "lsp": {
+    "ruby-lsp": {
+      "initialization_options": {
+        "featureFlags": { "fullTestDiscovery": true }
+      }
+    }
+  }
+}

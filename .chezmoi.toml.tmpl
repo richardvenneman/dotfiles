@@ -1,0 +1,11 @@
+{{- $profile := promptChoiceOnce . "profile" "Machine profile" (list "personal" "work") -}}
+
+[data]
+    profile = {{ $profile | quote }}
+
+[diff]
+    exclude = ["scripts"]
+
+[git]
+    autoCommit = false
+    autoPush = false
