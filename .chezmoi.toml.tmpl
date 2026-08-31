@@ -1,5 +1,7 @@
 {{- $profile := promptChoiceOnce . "profile" "Machine profile" (list "personal" "work") -}}
 
+sourceDir = "~/Developer/dotfiles"
+
 [data]
     profile = {{ $profile | quote }}
 
