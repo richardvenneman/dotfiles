@@ -19,10 +19,10 @@ $ gh auth login
 ## Installation
 
 ```
-$ sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply richardvenneman
+$ sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply --source=~/Developer/dotfiles richardvenneman
 ```
 
-This clones the repository to `~/.local/share/chezmoi`, asks me whether it's a personal or work machine, and then sets the rest up: dotfiles, Homebrew packages, App Store apps and language runtimes.
+This clones the repository to `~/Developer/dotfiles`, asks me whether it's a personal or work machine, and then sets the rest up: dotfiles, Homebrew packages, App Store apps and language runtimes.
 
 On a machine that already has configuration worth keeping I leave off `--apply`, so I can look at `chezmoi diff` before anything gets written.
 
@@ -37,7 +37,7 @@ To change my mind later I have to clear the answer first, since it's only asked 
 
 ```
 $ rm ~/.config/chezmoi/chezmoi.toml
-$ chezmoi init --promptChoice "Machine profile=personal"
+$ chezmoi init --source=~/Developer/dotfiles --promptChoice "Machine profile=personal"
 $ chezmoi apply
 ```
 
