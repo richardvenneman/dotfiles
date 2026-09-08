@@ -1,0 +1,146 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "cli_default_open_behavior": "existing_window",
+  "diff_view_style": "unified",
+  "telemetry": {
+    "diagnostics": true,
+    "metrics": true,
+    "anthropic_retention": true
+  },
+  "agent_servers": {
+    "claude-acp": {
+      "default_config_options": {
+        "fast": false,
+        "mode": "auto",
+        "model": "claude-fable-5"
+      },
+      "type": "registry"
+    }
+  },
+  "proxy": "",
+  "project_panel": {
+    "dock": "right"
+  },
+  "outline_panel": {
+    "dock": "left"
+  },
+  "collaboration_panel": {
+    "dock": "left"
+  },
+  "agent": {
+    "default_profile": "ask",
+    "notify_when_agent_waiting": "never",
+    "play_sound_when_agent_done": "always",
+    "tool_permissions": {
+      "tools": {
+        "mcp:linear:get_diff_threads": {
+          "default": "allow"
+        },
+        "mcp:linear:get_diff": {
+          "default": "allow"
+        },
+        "terminal": {
+          "always_allow": [
+            {
+              "pattern": "^bundle\\s+exec(\\s|$)"
+            },
+            {
+              "pattern": "^tail\\b"
+            },
+            {
+              "pattern": "^git\\s+add(\\s|$)"
+            },
+            {
+              "pattern": "^git\\s+commit(\\s|$)"
+            },
+            {
+              "pattern": "^git\\s+push(\\s|$)"
+            },
+            {
+              "pattern": "^git\\s+status(\\s|$)"
+            },
+            {
+              "pattern": "^doppler\\s+run(\\s|$)"
+            },
+            {
+              "pattern": "^git\\b"
+            },
+            {
+              "pattern": "^grep\\b"
+            }
+          ]
+        },
+        "mcp:linear:get_issue": {
+          "default": "allow"
+        },
+        "mcp:linear:save_issue": {
+          "default": "allow"
+        },
+        "mcp:linear:list_projects": {
+          "default": "allow"
+        },
+        "mcp:Sentry:get_sentry_resource": {
+          "default": "allow"
+        }
+      }
+    },
+    "default_model": {
+      "provider": "zed.dev",
+      "model": "claude-fable-5",
+      "enable_thinking": true,
+      "effort": "high"
+    },
+    "dock": "right",
+    "favorite_models": [],
+    "model_parameters": []
+  },
+  "git_panel": {
+    "dock": "left"
+  },
+  "context_servers": {
+    "linear": {
+      "enabled": true,
+      "url": "https://mcp.linear.app/mcp"
+    },
+    "Sentry": {
+      "enabled": true,
+      "command": "npx",
+      "args": ["-y", "mcp-remote@latest", "https://mcp.sentry.dev/mcp"]
+    }
+  },
+  "ui_font_size": 16,
+  "buffer_font_family": "Cascadia Code NF",
+  // "buffer_font_features": { "ss01": 1, "ss03": 1, "ss19": 1 },
+  "buffer_font_size": 16,
+  "theme": {
+    "mode": "system",
+    "light": "Monospace dark",
+    "dark": "Blinds (Default Dark)"
+  },
+  "languages": {
+    "Ruby": {
+      "tab_size": 2,
+      "language_servers": ["ruby-lsp", "!rubocop"],
+      "formatter": "language_server",
+      "format_on_save": "on"
+    }
+  },
+  "lsp": {
+    "ruby-lsp": {
+      "initialization_options": {
+        "enabledFeatures": {
+          "diagnostics": false,
+          "formatting": true
+        },
+        "formatter": "rubyfmt"
+      }
+    }
+  }
+}

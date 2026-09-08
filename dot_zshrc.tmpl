@@ -38,5 +38,8 @@ case ":$PATH:" in
 esac
 # pnpm end
 
+# Machine-local config and secrets, kept out of this repository.
+[ -f "$HOME/.zshrc.local" ] && source "$HOME/.zshrc.local"
+
 # Must be sourced last to wrap the widgets above it.
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
