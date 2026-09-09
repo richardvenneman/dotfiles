@@ -14,7 +14,7 @@ brew trust --tap stripe/stripe-cli heroku/brew{{ if eq .profile "work" }} dopple
 # `brew bundle` fail on that cask, which would skip this step entirely.
 # Adoption needs sudo when the app's permissions require a chmod.
 echo "==> Adopting apps installed outside Homebrew"
-for app in arc claude cleanshot postico home-assistant slack soulver beeper{{ if eq .profile "personal" }} screen-studio{{ end }}; do
+for app in arc claude chatgpt cleanshot postico home-assistant slack soulver beeper{{ if eq .profile "personal" }} screen-studio{{ end }}; do
     if ! brew list --cask "$app" >/dev/null 2>&1; then
         brew install --cask --adopt "$app" || echo "  ! could not adopt $app (skipping)"
     fi
