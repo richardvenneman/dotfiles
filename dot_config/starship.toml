@@ -1,7 +1,7 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
 # Caps how long a single module may stall the whole prompt.
-command_timeout = 1000
+command_timeout = 3000
 scan_timeout = 30
 
 # ── Directory ───────────────────────────────────────────────────────────
