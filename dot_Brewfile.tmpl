@@ -8,6 +8,9 @@ tap "stripe/stripe-cli"
 {{ if eq .profile "work" -}}
 tap "dopplerhq/cli"
 {{ end -}}
+{{ if eq .profile "personal" -}}
+tap "gerlero/openfoam"
+{{ end -}}
 
 # ── Bootstrap ───────────────────────────────────────────────────────────
 # Deliberately not managed by mise — these install everything else.
@@ -77,6 +80,10 @@ cask "coderabbit"
 # ── Hardware / IoT ──────────────────────────────────────────────────────
 brew "esphome"
 brew "esptool"
+
+# ── Simulation ──────────────────────────────────────────────────────────
+cask "gerlero/openfoam/openfoam"
+cask "freecad"
 
 {{ end -}}
 # ── Applications ────────────────────────────────────────────────────────
