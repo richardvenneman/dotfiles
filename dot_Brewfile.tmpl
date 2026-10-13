@@ -5,6 +5,7 @@
 # ── Taps ────────────────────────────────────────────────────────────────
 tap "heroku/brew"
 tap "stripe/stripe-cli"
+tap "docdyhr/tap"
 {{ if eq .profile "work" -}}
 tap "dopplerhq/cli"
 {{ end -}}
@@ -41,6 +42,10 @@ brew "zsh-autosuggestions"
 brew "zsh-syntax-highlighting"
 brew "terminal-notifier"
 brew "herdr"
+
+# ── MCP servers ─────────────────────────────────────────────────────────
+# Needs MacWhisper's CLI enabled (Settings → Advanced → Command-Line Tool).
+brew "docdyhr/tap/macwhisper-mcp-server"
 
 # ── Languages & build ───────────────────────────────────────────────────
 # Toolchain and native-extension deps only; runtime versions belong to mise.
