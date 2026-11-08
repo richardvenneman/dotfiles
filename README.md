@@ -31,7 +31,7 @@ On a machine that already has configuration worth keeping I leave off `--apply`,
 I'm asked once whether the machine is `personal` or `work`, and the answer is remembered in `~/.config/chezmoi/chezmoi.toml`. It decides:
 
 - **work** — my beehiiv git identity and the Doppler CLI
-- **personal** — games, media, the tools I use for flashing hardware, and the Moneybird CLI
+- **personal** — games, media, the tools I use for flashing hardware, Mistral Vibe, and the Moneybird CLI
 
 To change my mind later I have to clear the answer first, since it's only asked when it isn't already known:
 

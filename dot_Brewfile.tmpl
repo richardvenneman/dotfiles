@@ -82,6 +82,9 @@ cask "coderabbit"
 {{ end -}}
 
 {{ if eq .profile "personal" -}}
+# ── AI ──────────────────────────────────────────────────────────────────
+brew "mistral-vibe"
+
 # ── Hardware / IoT ──────────────────────────────────────────────────────
 brew "esphome"
 brew "esptool"
