@@ -3,6 +3,12 @@ export DISABLE_SPRING="true"
 setopt HIST_IGNORE_SPACE
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
+# `brew install` of an installed package would otherwise upgrade it past the 7-day wait.
+export HOMEBREW_NO_INSTALL_UPGRADE=1
+# Bare `brew upgrade` only takes versions at least 7 days old; `brew upgrade <name>` skips the wait.
+brew() {
+  if [[ $1 == upgrade && $# -eq 1 ]]; then mise run brew-upgrade; else command brew "$@"; fi
+}
 
 eval "$(mise activate zsh)"
 

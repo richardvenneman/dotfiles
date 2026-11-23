@@ -58,7 +58,10 @@ Everything I want installed lives in `~/.Brewfile`. It only ever installs, so an
 ```
 $ mise run brew-sync        # install what's declared
 $ mise run brew-cleanup     # show what's installed but not declared
+$ mise run brew-upgrade     # upgrade packages whose version is at least 7 days old
 ```
+
+`brew upgrade` with no arguments runs `brew-upgrade` too. Packages that release more often than weekly, like awscli, can stay behind; `brew upgrade <name>` upgrades one right away.
 
 The App Store apps need me signed in to the App Store first. If I'm not, they fail and the rest of the run carries on without them — so it's worth re-running once I've signed in.
 

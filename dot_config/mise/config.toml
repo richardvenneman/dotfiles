@@ -20,6 +20,40 @@ echo 'Nothing was removed. To actually remove the above:'
 echo '  brew bundle cleanup --global --force'
 """
 
+[tasks.brew-upgrade]
+description = "Upgrade Homebrew packages whose current version is at least 7 days old"
+shell = "bash -c"
+run = '''
+set -euo pipefail
+brew update --quiet
+# Installs the same versions that were checked below.
+export HOMEBREW_NO_AUTO_UPDATE=1
+
+formulae="" casks=""
+while IFS=$'\t' read -r kind name tap path; do
+  # The last commit to a package file is never older than its current version.
+  # Any later edit also restarts the 7 days, so this errs toward waiting.
+  age=$(gh api "repos/${tap%%/*}/homebrew-${tap#*/}/commits?path=$path&per_page=1" \
+    --jq '(now - (.[0].commit.committer.date | fromdateiso8601)) / 86400 | floor' 2>/dev/null) || age=""
+  if [[ -z $age ]]; then
+    echo "skip $name: no commit history on GitHub"
+  elif (( age < 7 )); then
+    echo "wait $name: updated $age days ago"
+  elif [[ $kind == formula ]]; then
+    formulae+=" $name"
+  else
+    casks+=" $name"
+  fi
+done < <(brew info --json=v2 --installed | jq -r '
+  (.formulae[] | select(.outdated and (.pinned | not)) | ["formula", .name, .tap, .ruby_source_path]),
+  (.casks[] | select(.outdated) | ["cask", .token, .tap, .ruby_source_path])
+  | @tsv')
+
+# Outdated dependencies of these packages upgrade with them, even when newer than 7 days.
+if [[ -n $formulae ]]; then brew upgrade --formula $formulae; fi
+if [[ -n $casks ]]; then brew upgrade --cask $casks; fi
+'''
+
 [tasks.brew-sync]
 description = "Install everything declared in ~/.Brewfile"
 run = "brew bundle install --global --no-upgrade"
