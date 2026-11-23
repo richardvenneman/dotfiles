@@ -53,7 +53,6 @@ brew "cmake"
 brew "rust"
 brew "libyaml"
 brew "libffi"
-brew "guile"
 brew "protobuf"
 brew "biome"
 brew "rubyfmt"
@@ -72,7 +71,6 @@ brew "yt-dlp"
 brew "stripe/stripe-cli/stripe"
 brew "heroku"
 brew "flyctl"
-brew "mysql-client"
 
 {{ if eq .profile "work" -}}
 # Ships as a cask, not a formula.
@@ -98,7 +96,6 @@ cask "blender"
 # ── Applications ────────────────────────────────────────────────────────
 cask "ghostty"
 cask "zed"
-cask "firefox"
 cask "google-chrome"
 cask "orbstack"
 cask "github"
@@ -110,20 +107,19 @@ cask "google-gemini"
 cask "cleanshot"
 cask "codexbar"
 cask "maccy"
-cask "rectangle"
-cask "betterdisplay"
 cask "vivid-app"
 cask "languagetool-desktop"
 cask "handbrake-app"
 cask "loom"
-cask "beeper"
 cask "slack"
-cask "soulver"
 cask "purge"
 cask "font-fira-code-nerd-font"
 cask "font-cascadia-code-nf"
 
 {{ if eq .profile "personal" -}}
+cask "firefox"
+cask "beeper"
+cask "soulver"
 cask "screen-studio"
 cask "balenaetcher"
 cask "raspberry-pi-imager"
@@ -137,9 +133,7 @@ cask "rode-connect"
 {{ end -}}
 # ── Mac App Store ───────────────────────────────────────────────────────
 # Requires being signed into the App Store; `mas` cannot authenticate for you.
-mas "1Blocker", id: 1365531024
 mas "Amphetamine", id: 937984704
-mas "Color Picker", id: 1545870783
 mas "Keynote", id: 409183694
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
@@ -150,6 +144,7 @@ mas "WireGuard", id: 1451685025
 mas "Xcode", id: 497799835
 
 {{ if eq .profile "personal" -}}
+mas "Color Picker", id: 1545870783
 mas "Infuse", id: 1136220934
 mas "Menu World Time", id: 1446377255
 mas "MQTT Explorer", id: 1455214828
